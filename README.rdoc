@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+http://blog.envylabs.com/post/75521798481/token-based-authentication-in-rails
 
-Things you may want to cover:
+authenticate_or_request_with_http_token
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  1.it always responds with the Content-Type set to HTML regardless of the mime type requested by the API client.
+  2.no easy way to add a custom error message to the response body if we wanted to.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+use the authenticate_with_http_token method and manually build the response ourselves:
