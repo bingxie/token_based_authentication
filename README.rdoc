@@ -9,3 +9,7 @@ authenticate_or_request_with_http_token
 
 
 use the authenticate_with_http_token method and manually build the response ourselves:
+
+
+RSpec testing for a JSON API
+http://dhartweg.roon.io/rspec-testing-for-a-json-api
