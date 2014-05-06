@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authenticate, only: [:destroy]
+  before_action :authenticate, only: [:show, :destroy]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -86,7 +86,7 @@ class ProductsController < ApplicationController
     #   end
     # end
 
-
+    # Authorization: Token token=ABC
     def authenticate
       authenticate_token || render_unauthorized
     end
@@ -94,7 +94,7 @@ class ProductsController < ApplicationController
     # do more customization: authenticate_with_http_token
     def authenticate_token
       authenticate_with_http_token do |token, options|
-        token
+        token == 'ABC'
       end
     end
 

@@ -13,3 +13,5 @@ use the authenticate_with_http_token method and manually build the response ours
 
 RSpec testing for a JSON API
 http://dhartweg.roon.io/rspec-testing-for-a-json-api
+
+Try Dalli and memcached
